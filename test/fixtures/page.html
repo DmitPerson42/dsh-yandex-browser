@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Проверка инструментов DSH</title>
+</head>
+<body>
+  <h1>Проверка страницы</h1>
+  <p id="status">ничего не нажато</p>
+  <label for="name">Имя</label>
+  <input id="name" type="text" placeholder="введите имя">
+  <button type="button" id="show">Показать</button>
+  <button type="button" id="clear" aria-label="Очистить всё">Очистить</button>
+  <ul id="list">
+    <li><a href="https://example.com/">Первая ссылка</a></li>
+    <li><a href="https://example.org/">Вторая ссылка</a></li>
+  </ul>
+  <script>
+    document.getElementById('show').addEventListener('click', () => {
+      const value = document.getElementById('name').value
+      document.getElementById('status').textContent = value ? `Привет, ${value}` : 'Пусто'
+      window.__clicked = true
+    })
+    document.getElementById('clear').addEventListener('click', () => {
+      document.getElementById('name').value = ''
+      document.getElementById('status').textContent = 'очищено'
+      window.__clicked = true
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "dsh-yandex-browser",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH plugin: runs Yandex Browser with a persistent CDP profile and gives the agent tools to read and drive the pages inside it.",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "plugin": true
+  },
+  "license": "MIT",
+  "meta": {
+    "title": "Yandex Browser",
+    "description": "Persistent Yandex Browser profile for the agent, plus tools to read and drive pages over CDP."
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "yandex-browser",
+    "cdp",
+    "automation"
+  ],
+  "files": [
+    "lib",
+    "test",
+    "install.ps1",
+    "README.md",
+    "LICENSE"
+  ]
+}

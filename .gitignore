@@ -1,0 +1,10 @@
+node_modules/
+*.log
+
+# Tab bookkeeping written next to a browser profile during tests.
+agent-tabs.json
+test/.tabs.json
+
+# Screenshots produced by the tests.
+*.png
+!test/fixtures/*.png
