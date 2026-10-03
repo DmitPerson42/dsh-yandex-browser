@@ -96,8 +96,21 @@ yandex_act action: "close_created"   # закроет всё, что откры�
 
 ## Установка
 
+```sh
+dsh plugin --profile web add github:DmitPerson42/dsh-yandex-browser
+```
+
+Плагин ставится как обычный bundle: пакет объявляет `dsh.bundle.patch`, а лежащий
+рядом `cordis.patch.yml` добавляет его в профиль. Перезапусти DSH GUI - и всё.
+
+Тем же способом он ставится кнопкой из маркета плагинов
+(`dsh plugin --profile web add dshmarket`), когда плагин появится в каталоге.
+
+### Установка вручную, без CLI
+
 ```powershell
-pwsh -File .\install.ps1
+git clone https://github.com/DmitPerson42/dsh-yandex-browser
+pwsh -File .\dsh-yandex-browser\install.ps1
 ```
 
 Скрипт копирует плагин в `~\.dsh\plugins\dsh-yandex-browser` (без зависимостей,

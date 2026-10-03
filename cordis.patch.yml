@@ -1,0 +1,15 @@
+# Bundle layer for dsh-yandex-browser: mounts the plugin row into the profile
+# roster. Applied as a bundle layer through the `dsh.bundle.patch` manifest
+# field, so the host resolves `name` to this package's own root export
+# (lib/index.js). Install with:
+#
+#   dsh plugin --profile web add github:DmitPerson42/dsh-yandex-browser
+#
+# The row is inserted rather than merged with a same-id row on purpose: a
+# profile that already carries an id-targeted override keeps it, because patch
+# layers apply in order and a later layer still wins.
+- insert:
+    - id: yandex-browser
+      name: dsh-yandex-browser
+      config:
+        autoStart: true

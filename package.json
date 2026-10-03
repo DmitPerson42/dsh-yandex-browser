@@ -1,23 +1,29 @@
 {
   "name": "dsh-yandex-browser",
   "version": "2.0.0",
-  "private": true,
   "type": "module",
-  "description": "DSH plugin: runs Yandex Browser with a persistent CDP profile and gives the agent tools to read and drive the pages inside it.",
-  "main": "./lib/index.js",
+  "description": "DSH plugin: runs Yandex Browser with a persistent signed-in profile for the agent, and exposes tools to read and drive the pages inside it over the DevTools protocol.",
+  "icon": "icon.svg",
+  "main": "lib/index.js",
   "exports": {
-    ".": "./lib/index.js"
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./icon.svg": "./icon.svg"
   },
   "engines": {
     "node": ">=22"
   },
   "dsh": {
-    "plugin": true
+    "engines": {
+      "dsh": ">=0.2.0-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
   },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DmitPerson42/dsh-yandex-browser.git"
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.1"
   },
   "meta": {
     "title": "Yandex Browser",
@@ -28,13 +34,21 @@
     "deepseek-harness",
     "yandex-browser",
     "cdp",
+    "browser",
     "automation"
   ],
   "files": [
     "lib",
-    "test",
+    "cordis.patch.yml",
     "install.ps1",
     "README.md",
-    "LICENSE"
-  ]
+    "README.en.md",
+    "LICENSE",
+    "icon.svg"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DmitPerson42/dsh-yandex-browser.git"
+  }
 }

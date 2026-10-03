@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Yandex Browser">
+  <rect width="512" height="512" rx="104" fill="#1c2230"/>
+  <rect x="64" y="96" width="384" height="320" rx="32" fill="#ffffff"/>
+  <path d="M64 164v-36a32 32 0 0 1 32-32h320a32 32 0 0 1 32 32v36z" fill="#e8ecf3"/>
+  <circle cx="116" cy="130" r="13" fill="#ff5f57"/>
+  <circle cx="156" cy="130" r="13" fill="#febc2e"/>
+  <circle cx="196" cy="130" r="13" fill="#28c840"/>
+  <path d="M176 208h50l30 53 30-53h50l-54 95v67h-52v-67z" fill="#fc3f1d"/>
+</svg>

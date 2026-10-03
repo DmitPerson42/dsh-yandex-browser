@@ -95,8 +95,22 @@ id returned from `yandex_page action: "tabs"` or `yandex_act`.
 
 ## Installation
 
+```sh
+dsh plugin --profile web add github:DmitPerson42/dsh-yandex-browser
+```
+
+The plugin installs as an ordinary bundle: the package declares
+`dsh.bundle.patch`, and the `cordis.patch.yml` next to it adds the plugin to the
+profile. Restart the DSH GUI afterwards and that is it.
+
+The same install works as a one-click button in the plugin market
+(`dsh plugin --profile web add dshmarket`) once the plugin is in the catalog.
+
+### Installing by hand, without the CLI
+
 ```powershell
-pwsh -File .\install.ps1
+git clone https://github.com/DmitPerson42/dsh-yandex-browser
+pwsh -File .\dsh-yandex-browser\install.ps1
 ```
 
 The script copies the plugin into `~\.dsh\plugins\dsh-yandex-browser` (no
