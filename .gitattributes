@@ -1,5 +1,4 @@
-﻿# Keep line endings stable across Windows and Linux checkouts: the plugin is
+# Keep line endings stable across Windows and Linux checkouts: the plugin is
 # loaded by DSH on Windows, but a public repo gets cloned on both.
 * text=auto eol=lf
 *.ps1 text eol=crlf
-
