@@ -120,10 +120,15 @@ pwsh -File .\dsh-yandex-browser\install.ps1
 ```yaml
 - insert:
     - id: yandex-browser
-      name: "file:///C:/Users/Druli/.dsh/plugins/dsh-yandex-browser/lib/index.js"
+      name: "file:///<твой домашний каталог>/.dsh/plugins/dsh-yandex-browser/lib/index.js"
       config:
         autoStart: true
 ```
+
+В `name` подставляется абсолютный путь к твоему профилю - тот самый, что печатает
+`install.ps1`. Например, у пользователя `ivan` это
+`file:///C:/Users/ivan/.dsh/plugins/dsh-yandex-browser/lib/index.js`. В URL
+обязательно три слеша, имя пользователя подставляешь своё.
 
 После правки конфигурации перезапусти DSH GUI.
 

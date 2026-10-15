@@ -120,10 +120,15 @@ dependencies, Node built-ins only) and prints what to add to
 ```yaml
 - insert:
     - id: yandex-browser
-      name: "file:///C:/Users/Druli/.dsh/plugins/dsh-yandex-browser/lib/index.js"
+      name: "file:///<your home directory>/.dsh/plugins/dsh-yandex-browser/lib/index.js"
       config:
         autoStart: true
 ```
+
+`name` holds an absolute path to your own profile, exactly what `install.ps1`
+prints. For a user named `ivan` it reads
+`file:///C:/Users/ivan/.dsh/plugins/dsh-yandex-browser/lib/index.js`. The URL
+keeps three slashes, and the user name is the part you replace.
 
 Restart the DSH GUI after editing the configuration.
 
