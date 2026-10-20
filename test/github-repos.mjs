@@ -105,7 +105,7 @@ const repos = JSON.parse(await evaluate(`JSON.stringify(
 
 console.log(`репозиториев: ${repos.length}\n`)
 for (const repo of repos) {
-  console.log(`— ${repo.name}`)
+  console.log(`- ${repo.name}`)
   if (repo.description) console.log(`    ${repo.description}`)
   console.log(`    ${repo.lines.slice(1).join(' · ')}`)
   console.log('')

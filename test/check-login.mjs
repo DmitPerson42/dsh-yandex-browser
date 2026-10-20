@@ -1,7 +1,7 @@
 // Checks whether the agent browser profile is signed in, using two independent
 // signals instead of guessing from a URL redirect:
 //   1. session cookies for the yandex domains (names only, never values),
-//   2. the state of yandex.ru itself — signed out shows a "Войти" call to action.
+//   2. the state of yandex.ru itself - signed out shows a "Войти" call to action.
 // Both are read from a throwaway tab that is closed again at the end.
 //
 //   node test/check-login.mjs [url]
@@ -99,7 +99,7 @@ console.log(`поле пароля: ${state.hasPasswordField ? 'есть' : 'н�
 const bounced = !/passport\.yandex\.ru\/(auth|login)/i.test(state.href ?? '')
 const signedIn = Boolean(loginCookie) && Boolean(sessionCookie) && bounced && !state.hasPasswordField
 console.log(signedIn
-  ? '\nВЕРДИКТ: вход выполнен — сессия активна, профиль открывается без формы входа.'
+  ? '\nВЕРДИКТ: вход выполнен - сессия активна, профиль открывается без формы входа.'
   : '\nВЕРДИКТ: вход НЕ выполнен.')
 
 socket.close()

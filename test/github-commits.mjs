@@ -68,7 +68,7 @@ if (tree) {
       })
   `) ?? '[]')
   console.log(`=== ${tree} ===`)
-  for (const row of listing) console.log(`  ${row.name}${row.message ? '   — ' + row.message : ''}`)
+  for (const row of listing) console.log(`  ${row.name}${row.message ? '   - ' + row.message : ''}`)
 }
 
 for (const repo of repos) {
@@ -84,7 +84,7 @@ for (const repo of repos) {
       }
     }).filter(c => c.message)
   `) ?? '[]')
-  console.log(`\n=== ${repo} — последние коммиты (${commits.length}) ===`)
+  console.log(`\n=== ${repo} - последние коммиты (${commits.length}) ===`)
   for (const commit of commits) console.log(`  ${commit.when.slice(0, 10)}  ${commit.sha?.slice(0, 7)}  ${commit.message}`)
 }
 

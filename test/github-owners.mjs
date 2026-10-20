@@ -72,9 +72,9 @@ for (const repo of repos) {
   if (repo.description) console.log(`          описание: ${repo.description}`)
 }
 const own = repos.filter((r) => r.owner === user)
-console.log(`\nсвоих: ${own.length} — ${own.map((r) => r.name).join(', ')}`)
+console.log(`\nсвоих: ${own.length} - ${own.map((r) => r.name).join(', ')}`)
 const foreign = repos.filter((r) => r.owner !== user)
-console.log(`чужих (организации): ${foreign.length} — ${foreign.map((r) => r.path).join(', ')}`)
+console.log(`чужих (организации): ${foreign.length} - ${foreign.map((r) => r.path).join(', ')}`)
 
 socket.close()
 await fetch(`${origin}/json/close/${created.id}`).catch(() => {})

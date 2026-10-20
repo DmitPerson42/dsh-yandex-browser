@@ -22,7 +22,7 @@ for (const port of process.argv.slice(2)) {
   const label = (info['User-Agent'] ?? '').match(/YaBrowser\/[\d.]+/)?.[0] ?? info.Browser
 
   // Browser.close makes the process quit, which kills the socket before it can
-  // send a close frame — so confirm by polling the endpoint instead.
+  // send a close frame - so confirm by polling the endpoint instead.
   try {
     const socket = new WebSocket(info.webSocketDebuggerUrl)
     await new Promise((resolve) => {
@@ -46,5 +46,5 @@ for (const port of process.argv.slice(2)) {
     await new Promise((r) => setTimeout(r, 300))
     closed = !(await alive(port))
   }
-  console.log(`порт ${port}: ${label} — ${closed ? 'закрыт' : 'не удалось закрыть'}`)
+  console.log(`порт ${port}: ${label} - ${closed ? 'закрыт' : 'не удалось закрыть'}`)
 }

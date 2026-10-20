@@ -51,7 +51,7 @@ if (Test-Path $patch) {
     }
   }
 } else {
-  Write-Host "    не найден $patch — создайте его вручную:"
+  Write-Host "    не найден $patch - создайте его вручную:"
   Write-Host $entry
 }
 

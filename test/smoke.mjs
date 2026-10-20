@@ -1,8 +1,8 @@
 // Smoke test: loads the plugin the way the dsh loader does (file URL import),
 // registers it into a stub ctx.tools, and runs the lifecycle actions.
 //
-//   node test/smoke.mjs            — status only, never launches a browser
-//   node test/smoke.mjs --launch   — also starts the browser and opens a tab
+//   node test/smoke.mjs            - status only, never launches a browser
+//   node test/smoke.mjs --launch   - also starts the browser and opens a tab
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import path from 'node:path'
 

@@ -61,11 +61,11 @@ for (let waited = 0; waited < waitSeconds; waited += 5) {
   })
   const state = JSON.parse(probed.result?.result?.value ?? '{}')
   if (state.href && state.href !== 'about:blank') {
-    console.log(`через ${waited + 5}с: ${state.title} — ${state.href}`)
+    console.log(`через ${waited + 5}с: ${state.title} - ${state.href}`)
     break
   }
   console.log(`через ${waited + 5}с: загружается…`)
 }
 
 socket.close()
-console.log('вкладка оставлена открытой — введите логин и пароль в окне браузера')
+console.log('вкладка оставлена открытой - введите логин и пароль в окне браузера')

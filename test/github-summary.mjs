@@ -1,5 +1,5 @@
 // One line per repository: last commit date, commit count, license and whether
-// the repository is private — read from the repository home page.
+// the repository is private - read from the repository home page.
 //
 //   node test/github-summary.mjs Ljy-0827/Director Ljy-0827/leetcode
 const repos = process.argv.slice(2)
@@ -72,7 +72,7 @@ for (const repo of repos) {
       hasReadme: /#readme/.test(document.documentElement.innerHTML)
     })
   })()`) ?? '{}')
-  console.log(`${repo.padEnd(44)} коммитов: ${(info.commits || '?').padEnd(5)} последний: ${info.lastCommit || '?'}  ${info.private ? 'private' : 'public'}  лицензия: ${info.license || '—'}  issues: ${info.issues || '—'}`)
+  console.log(`${repo.padEnd(44)} коммитов: ${(info.commits || '?').padEnd(5)} последний: ${info.lastCommit || '?'}  ${info.private ? 'private' : 'public'}  лицензия: ${info.license || '-'}  issues: ${info.issues || '-'}`)
 }
 
 socket.close()

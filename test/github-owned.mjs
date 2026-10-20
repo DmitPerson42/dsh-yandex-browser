@@ -51,7 +51,7 @@ for (const url of ['https://github.com/settings/profile', 'https://github.com/se
   })()`) ?? '{}')
   console.log(`\n=== ${url} ===`)
   console.log(`заголовок: ${state.title}`)
-  console.log(`счётчик в тексте: ${state.count || '—'}`)
+  console.log(`счётчик в тексте: ${state.count || '-'}`)
   if (state.repos?.length) console.log(`репозитории: ${state.repos.join(', ')}`)
   console.log(`начало страницы:\n${(state.head || '').slice(0, 300)}`)
 }
